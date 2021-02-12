@@ -188,6 +188,8 @@ class Deployer {
 
     public static function s3Client() : \Aws\S3\S3Client {
         $client_options = [
+            'endpoint' => 'http://s3.wasabisys.com',
+            'profile' => 'wasabi',
             'version' => 'latest',
             'region' => Controller::getValue( 's3Region' ),
         ];
